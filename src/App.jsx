@@ -25,7 +25,7 @@ function App() {
   useEffect(() => {
     const fetchDoctors = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/doctors');
+        const response = await axios.get('https://medicals-95rx.vercel.app/api/doctors');
         setDoctors(response.data);
       } catch (error) {
         console.error('Error fetching doctors:', error);
@@ -47,7 +47,7 @@ function App() {
         return;
       }
 
-      await axios.post('http://localhost:5000/api/appointments', {
+      await axios.post('https://medicals-95rx.vercel.app/api/appointments', {
         ...appointmentData,
         doctorId: selectedDoctor._id
       });
@@ -81,7 +81,7 @@ function App() {
                 >
                   <Menu className="h-6 w-6 text-gray-500" />
                 </button>
-                <h1 className="text-2xl font-bold text-blue-600">Appolo Clinic</h1>
+                <h1 className="text-2xl font-bold text-blue-600">Appolo Clini</h1>
               </div>
               
               <div className="hidden lg:flex flex-1 max-w-2xl mx-8">
